@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "149149029606",
+    "project_id": "artzfly",
+    "storage_bucket": "artzfly.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149149029606:android:c1868df800ad2fec401727",
+        "android_client_info": {
+          "package_name": "com.artzfly.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149149029606-6h6bbkutabnlfkq36k6qa5k7k2oq438c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuj6YZ1Wf4G1mMa0dzwFKvTFHXR9bFRpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149149029606-6h6bbkutabnlfkq36k6qa5k7k2oq438c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
