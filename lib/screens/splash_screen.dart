@@ -13,6 +13,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  static final Widget _portrait = Image.asset(
+    splashBg,
+    fit: BoxFit.fitWidth,
+    height: double.infinity,
+    width: double.infinity,
+  );
+
+  static final Widget _landscape = Image.asset(
+    splashBg,
+    fit: BoxFit.fitWidth,
+    height: double.infinity,
+    width: double.infinity,
+  );
+
+  Widget _child = _landscape;
   @override
   void initState() {
     gotoNextScreen();
@@ -22,11 +37,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Image.asset(
-        splashBg,
-        fit: BoxFit.cover,
-        height: double.infinity,
-        width: double.infinity,
+      body: SingleChildScrollView(
+        child: OrientationBuilder(builder: (_, orientation) {
+          if (orientation == Orientation.portrait)
+            _child = _portrait;
+          else
+            _child = _landscape;
+
+          return _child;
+        }),
       ),
     );
   }

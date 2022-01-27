@@ -142,7 +142,7 @@ class _WebviewScreenState extends State<WebviewScreen> {
                   color: Colors.white,
                   child: Image.asset(
                     splashBg,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               if (_error)
