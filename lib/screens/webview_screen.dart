@@ -124,6 +124,10 @@ class _WebviewScreenState extends State<WebviewScreen> {
                 navigationDelegate: (NavigationRequest request) {
                   if (request.url.contains('addthis.com') ||
                       request.url.contains('sms:?') ||
+                      request.url.contains('www.facebook.com') ||
+                      request.url.contains('twitter.com') ||
+                      request.url.contains('www.instagram.com') ||
+                      request.url.contains('wa.me') ||
                       request.url.contains('www.pinterest.com/pin')) {
                     _launchURL(request.url);
                     return NavigationDecision.prevent;
