@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       900: Colors.yellow[700]!,
     };
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'artzfly - Handmade in India',
       theme: ThemeData(
         // This is the theme of your application.
         //

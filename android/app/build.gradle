@@ -37,7 +37,8 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.artzfly.app"
         minSdkVersion 20
-        targetSdkVersion flutter.targetSdkVersion
+        targetSdkVersion 31
+        compileSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
