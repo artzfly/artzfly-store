@@ -230,7 +230,6 @@ class _WebviewScreenState extends State<WebviewScreen> {
           ),
         ),
       bottomNavigationBar: !_loading ? SizedBox(
-        height: 50,
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
