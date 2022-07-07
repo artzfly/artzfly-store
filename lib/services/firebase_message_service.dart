@@ -16,7 +16,6 @@ class FirebaseMessageService {
     var androidPlatformChannelSpecifics = const AndroidNotificationDetails(
       'Notifications',
       'Events Notifications',
-      'Notifies you about the events',
       icon: 'flutter_devs',
       largeIcon: DrawableResourceAndroidBitmap('flutter_devs'),
     );
@@ -47,7 +46,6 @@ class FirebaseMessageService {
     var androidPlatformChannelSpecifics = const AndroidNotificationDetails(
       'Notifications',
       'Events Notifications',
-      'Notifies you about the events',
       icon: 'flutter_devs',
       largeIcon: DrawableResourceAndroidBitmap('flutter_devs'),
     );
