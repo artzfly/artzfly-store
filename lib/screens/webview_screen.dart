@@ -9,7 +9,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/platform_interface.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+import 'package:app/services/fcm_handler.dart';
 // late int scheck;
 // late WebViewController _controller;
 
@@ -266,8 +266,9 @@ class _WebviewScreenState extends State<WebviewScreen> {
   }
 
   void startFirebase() async {
-    await FirebaseMessaging.instance.getToken();
-    FirebaseMessageService.startMessageListener(context);
+    FCMHandler.getFcmToken();
+    // await FirebaseMessaging.instance.getToken();
+    // FirebaseMessageService.startMessageListener(context);
   }
 }
 

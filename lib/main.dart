@@ -1,11 +1,19 @@
 import 'package:app/screens/splash_screen.dart';
 import 'package:app/screens/webview_screen.dart';
+import 'package:app/services/fcm_handler.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+  FirebaseMessaging.onBackgroundMessage(FCMHandler.fcmBackgroundMessageHandler);
   runApp(const MyApp());
 }
 
@@ -27,6 +35,7 @@ class MyApp extends StatelessWidget {
       800: Colors.yellow[900]!,
       900: Colors.yellow[700]!,
     };
+    FCMHandler.initFcmListeners();
     return MaterialApp(
       title: 'artzfly - Handmade in India',
       theme: ThemeData(
